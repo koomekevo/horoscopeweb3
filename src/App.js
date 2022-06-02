@@ -196,7 +196,9 @@ function App() {
 		 
 	  <br/>
 	  <br/>
-	  <button>Mint</button>
+	  <button isLoading={isMinting} onClick={mintNFT}>
+        Mint
+      </button>
     </div>
   );
 }
