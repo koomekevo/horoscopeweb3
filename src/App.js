@@ -4,6 +4,9 @@ import './App.css';
 import { useEffect, useState } from "react";
 import { Contract, providers } from "ethers";
 
+import NFT from  "./abi/horoscopeNFT.json";
+const NFT_CONTRACT_ADDRESS = "0x1447cCA21DD86fA71Fd6104a5B54Da4A89c1d22D";
+
 
 function App() {
   // state to keep track whether the user has installed wallet or not.
