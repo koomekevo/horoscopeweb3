@@ -129,22 +129,22 @@ function App() {
 
   useEffect(() => {
     function initNFTContract() {
-        const provider = new providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        setNFTContract(new Contract(NFT_CONTRACT_ADDRESS, NFT.abi, signer));
+      const provider = new providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      setNFTContract(new Contract(NFT_CONTRACT_ADDRESS, NFT.abi, signer));
     }
     initNFTContract();
-}, [account]);
+  }, [account]);
 
-async function mintNFT() {
+  async function mintNFT() {
     setIsMinting(true);
     try {
-        await NFTContract.mintNFT(account, zodiacSign);
+      await NFTContract.mintNFT(account, zodiacSign);
     } catch (e) {
     } finally {
-        setIsMinting(false);
+      setIsMinting(false);
     }
-}
+  }
 
   if (account === null) {
 	return (
